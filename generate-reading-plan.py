@@ -153,7 +153,6 @@ def write_ics(schedule, output_path):
 
         start_str = item['start_date'].strftime('%Y%m%d')
 
-        # all day DTEND is exclusive, so add 1 day
         end_exclusive = item['end_date'] + timedelta(days=1)
         end_str = end_exclusive.strftime('%Y%m%d')
 
