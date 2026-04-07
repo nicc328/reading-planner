@@ -6,6 +6,7 @@ import math
 ## ===== variable config start =====
 
 # logic variables
+user_name = 'Nic Cohn'
 use_rec_rule = True
 use_libby_rules = True
 
@@ -27,7 +28,9 @@ rec_per_month = 1
 # Libby rules
 libby_delays = {
     77197: 1,
-    210300489: 8
+    210300489: 8,
+    18739426: 4,
+    51057191: 8
 }
 
 ## ===== variable config end =====
@@ -134,7 +137,7 @@ def write_ics(schedule, output_path):
     lines = [
         'BEGIN:VCALENDAR',
         'VERSION:2.0',
-        'PRODID:-//Nic Cohn//Reading Planner//EN',
+        f'PRODID:-//{user_name}//Reading Planner//EN',
         'CALSCALE:GREGORIAN',
         'METHOD:PUBLISH'
     ]
